@@ -151,7 +151,7 @@ Open your browser and go to 👉 **http://127.0.0.1:9001/**
 ## 👨‍💻 Author
 
 **Mohan Cheekatla**  
-Final Year B.Tech (Electronics & Communication Engineering)  
+2025 B.Tech (Electronics & Communication Engineering) graduate
 Passionate about **Full-Stack Projects**, **Web Development**, and **AI Projects**.
 
 ---
