@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; 
+    text-align: center;
+    color: #333;
+
+    /* Background image from previous step (assuming it's named background.png) */
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+/* --- NEW KEYFRAMES FOR SUBTLE SHADOW ANIMATION --- */
+@keyframes shiftShadow {
+    0% {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    50% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+    100% {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.container {
+    width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    
+    /* --- NEW BACKGROUND COLOR (Cool Gray/Blue Gradient) --- */
+    background: linear-gradient(145deg, #f7f9fb, #eef1f6); /* Light gray-blue gradient */
+    
+    border-radius: 15px;
+    
+    /* Initial shadow setup for the animation to start from */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    
+    /* --- CONTAINER ANIMATION SETUP (Subtle Shadow Shift) --- */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: shiftShadow 4s infinite alternate ease-in-out; /* Slow, repeating shadow shift */
+}
+
+/* --- ENHANCED HOVER ANIMATION FOR CONTAINER --- */
+.container:hover {
+    transform: translateY(-8px); /* Lifts the container up */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow for a pronounced lift effect */
+    animation: none; /* Stop repeating animation when focused by hover */
+}
+
+h1, h2, .result {
+    color: #2c3e50; /* Darker, professional text color */
+    z-index: 1;
+    position: relative;
+}
+
+label {
+    color: #34495e; /* Matching label color */
+    z-index: 1;
+    position: relative;
+    display: block;
+    margin: 10px 0 5px 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7; /* Light gray border */
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db; /* Clear blue border on focus */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6); 
+    outline: none;
+}
+
+button {
+    /* Changed button color to a professional teal/blue for better contrast */
+    background-color: #1abc9c; 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.5px; 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+}
+
+button:hover {
+    background-color: #16a085; /* Darker teal on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.4); 
+}
+
+button:active {
+    transform: scale(0.98);
+    background-color: #0f7a63; 
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d4edda;
+    background-color: #f0fff0; /* Very light mint green for result */
+    border-radius: 5px;
+    display: inline-block;
+    color: #155724; /* Dark green text */
+}
+
+a {
+    display: inline-block;
+    margin-top: 25px;
+    color: #95a5a6; /* Gray link color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3498db; /* Blue link on hover */
+    text-decoration: underline;
+}

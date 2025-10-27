@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram Fake Account Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Instagram Fake Account Detection</h1>
+        <form action="/submit" method="post">
+            <label>Profile Picture (0 or 1):</label>
+            <input type="text" name="profile_pic" required><br>
+
+            <label>Nums/Length Username:</label>
+            <input type="text" name="nums_length_username" required><br>
+
+            <label>Fullname Words:</label>
+            <input type="text" name="fullname_words" required><br>
+
+            <label>Nums/Length Fullname:</label>
+            <input type="text" name="nums_length_fullname" required><br>
+
+            <label>Name Equals Username (0 or 1):</label>
+            <input type="text" name="name_equals_username" required><br>
+
+            <label>Description Length:</label>
+            <input type="text" name="description_length" required><br>
+
+            <label>External URL (0 or 1):</label>
+            <input type="text" name="external_url" required><br>
+
+            <label>Private Account (0 or 1):</label>
+            <input type="text" name="private" required><br>
+
+            <label>Posts Count:</label>
+            <input type="text" name="posts" required><br>
+
+            <label>Followers Count:</label>
+            <input type="text" name="followers" required><br>
+
+            <label>Follows Count:</label>
+            <input type="text" name="follows" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
